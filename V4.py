@@ -1,6 +1,6 @@
 import discord
 import asyncio
-
+import os
 
 
 client = discord.Client()
@@ -30,4 +30,5 @@ async def on_message(message):
                 await message.channel.send(embed=embed)
                 print(f'ping is {round(client.latency * 1000)}ms')
 
-client.run("NTAzNTAyMTU3OTI1MDU2NTE0.XoA4-w.QD5VgisG0H4OAdKb15-pzr5D29Q")
+access_token = os.environ["BOT_TOKEN"]                
+client.run("access_token")
